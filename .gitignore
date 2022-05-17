@@ -32,7 +32,12 @@
 *.app
 
 # macOS
-.DS_Store
+**/.DS_Store
 
 # XCode
 *.xcodeproj
+*.xcworkspace
+
+# Sandbox
+Sandbox/*
+
