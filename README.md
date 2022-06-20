@@ -1,15 +1,28 @@
 # Morrigan
-###### 2D game engine for macOS
+2D game engine in C for macOS
+
+Check out this projects [Trello](https://trello.com/b/vdL7sXwB/morrigan) for the Roadmap and current progress
 
 
 
-## Important
+## Architecture [WIP]
 
-This project is at its beginning and will not be usable in any time soon!
+```
+└────────────────────────────────────────────┘
+┌────────────────────────────────────────────┐
+│ Core                                       │
+│ ┌────────┐ ┌───────────┐ ┌───────┐ ┌─────┐ │
+│ │ Logger │ │ Assertion │ │ Entry │ │ RNG │ │
+│ └────────┘ └───────────┘ └───────┘ └─────┘ │
+│ ┌───────────┐ ┌────────┐ ┌───────────────┐ │
+│ │ Profiling │ │ String │ │ Engine Config │ │
+│ └───────────┘ └────────┘ └───────────────┘ │
+└────────────────────────────────────────────┘
+┌────────────────────────────────────────────┐
+│ Platform Layer                             │
+│ ┌─────┐ ┌────────┐ ┌──────────┐ ┌────────┐ │
+│ │ API │ │ Window │ │ File I/O │ │ Memory │ │
+│ └─────┘ └────────┘ └──────────┘ └────────┘ │
+└────────────────────────────────────────────┘
+```
 
-
-
-## Description
-
-Morrigan is a small 2D game engine library made for macOS in C++
-Check out this projects [Trello](https://trello.com/b/vdL7sXwB/morrigan) for a detailed Roadmap and current progress
